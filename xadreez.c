@@ -1,81 +1,46 @@
 #include <stdio.h>
-
-int main(){
   
+void movimentoTorre(int i) {
+    if (i < 5){
+        printf("Direita\n");
+        movimentoTorre(i + 1);
+    }
+}
+
+void movimentoBispo(int i) {
+    if (i < 5){
+        printf("cima, direita\n");
+    movimentoBispo(i + 1);
+}
+}
+
+void movimentoRainha (int i){
+    if (i < 8){
+printf("esquerda\n");
+        movimentoRainha (i + 1); }
+    }
+
+void movimentoCavalo () {
+    int x, y;
+    for (x = 0; x < 2; x++) {
+        printf("cima\n");
+    }
+    for (y = 0; y < 1; y++) {
+        printf("direita\n");
+    }
+}
+
+
+int main() {
     printf("\nMovimento da torre:\n");
-for (int i = 0; i < 5; i++){
-printf("direita\n");
-
-}
-
-printf("\nMovimento do bispo:\n");
-int i = 0;
-while (i < 5){
-    printf("cima, direita\n");
-    i++;
-}
-
+    movimentoTorre(0);
+    printf("\nMovimento do bispo:\n");
+    movimentoBispo(0);
     printf("\nMovimento da rainha:\n");
+  movimentoRainha(0);
+  printf("\nMovimento do cavalo:\n");
+  movimentoCavalo();
 
-    i = 0;
-    do {
-        printf("esquerda\n");
-        i++;
-    } while (i<8);
-
-    printf("\nMovimento do cavalo:\n");
-int x = 0;
-for (int j = 0; j < 2; j++) {
-    printf("baixo\n");
-    x++;
-}
-
-int y = 0;
-while (y < 1){
-    printf("esquerda\n");
-    y++;
-
-}
-
-return 0;
-}#include <stdio.h>
-
-int main(){
-  
-    printf("\nMovimento da torre:\n");
-for (int i = 0; i < 5; i++){
-printf("direita\n");
-
-}
-
-printf("\nMovimento do bispo:\n");
-int i = 0;
-while (i < 5){
-    printf("cima, direita\n");
-    i++;
-}
-
-    printf("\nMovimento da rainha:\n");
-
-    i = 0;
-    do {
-        printf("esquerda\n");
-        i++;
-    } while (i<8);
-
-    printf("\nMovimento do cavalo:\n");
-int x = 0;
-for (int j = 0; j < 2; j++) {
-    printf("baixo\n");
-    x++;
-}
-
-int y = 0;
-while (y < 1){
-    printf("esquerda\n");
-    y++;
-
-}
 
 return 0;
 }
